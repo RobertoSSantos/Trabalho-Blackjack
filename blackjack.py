@@ -2,6 +2,8 @@ import pygame
 import random
 import itertools
 
+from player_ciclope import *
+
 # Initialize Pygame
 pygame.init()
 
@@ -10,7 +12,7 @@ screen = pygame.display.set_mode((800, 600))
 pygame.display.set_caption('Simple Blackjack')
 
 portraits = [
-  pygame.image.load(f'portrait/jacare.png'),
+  pygame.image.load(f'portrait/1.png'),
   pygame.image.load(f'portrait/2.png'),  
 ]
 
@@ -42,7 +44,7 @@ def calculate_hand_value(hand):
     value = 0
     ace_count = 0
     for card in hand:
-        print(card)
+        #print(card)
         if card.value == 'ace':
             ace_count += 1
         else:
@@ -93,15 +95,7 @@ class Card:
  # e você joga vendo a primeira carta dele
  #
  #
-class Player:
-  def decision(self, your_hand, dealer_first_card):
-    print("Player current hand", [d for d in your_hand])
-    print(f"Dealer first card {dealer_first_card}")    
-    print(f"Making decision...\n")       
-    return random.choice(["hit", "stop"])
 
-  def result(self, your_hand, dealer_first_card, decision):
-    pass
 
 class DealerPlayer:
   def decision(self, your_hand, dealer_hand):
@@ -111,16 +105,16 @@ class DealerPlayer:
     else:
       return "stop"
 
-  def result(self, your_hand, dealer_hand, decision):
+  def result(self, your_hand, dealer_hand, decision, reward, is_not_done):
+    print("Reward :", reward)
     pass
 
 # Main game loop
-def play_blackjack(player):
+def play_blackjack(player, round_num):
     running = True
     player_turn = False  # True if it's player's turn, False for dealer's turn
     dealer_turn = True
     
-
     # Create a deck of cards and deal initial hands
     # [rest of the initial setup is the same]
     deck = [Card(s,v) for s,v in itertools.product(suits, values)]
@@ -158,27 +152,30 @@ def play_blackjack(player):
                draw_card(deck, player_hand)
             else:
                player_turn = False
-               
-            decision = player.result(player_hand, dealer_hand[0], decision)   
-               
+
             if calculate_hand_value(player_hand) >= 21:
-              player_turn = False 
-        else:
-            # Compare hands and decide winner
-            player_value = calculate_hand_value(player_hand)
-            if (player_value > 21):
-              hand_result = -1
-            elif (dealer_value > 21):
-              hand_result = +1
-            elif (player_value >= dealer_value):
-              hand_result = +1
-            elif (player_value == dealer_value):
-              hand_result = 0
-            else:
-              hand_result = -1
-            print(f"Round result {hand_result}")
-                              
-            running = False
+              player_turn = False                
+               
+            score = 0   
+            #decision = player.result(player_hand, dealer_hand[0], decision)   
+            
+            if not player_turn:
+                # Compare hands and decide winner
+                player_value = calculate_hand_value(player_hand)
+                if (player_value > 21):
+                  hand_result = -1
+                elif (dealer_value > 21):
+                  hand_result = +1
+                elif (player_value >= dealer_value):
+                  hand_result = +1
+                elif (player_value == dealer_value):
+                  hand_result = 0
+                else:
+                  hand_result = -1
+                print(f"Round result {hand_result}")                     
+                running = False
+            # Decision
+            decision = player.result(player_hand, dealer_hand[0], decision, hand_result, player_turn)
         
         render_hand(player_hand, (150, 100))
         render_hand(dealer_hand, (150, 300))     
@@ -193,11 +190,12 @@ def play_blackjack(player):
 
 
 # Insire seu jogador abaixo:
-player = Player()
+player = Player_ciclope()
 
 results = []
-for _ in range(10):
-  results.append(play_blackjack(player))
+for i in range(10):
+  print(f"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= Starting game: {i} =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\n")
+  results.append(play_blackjack(player, i))
   
 import statistics
 print(f"Player expected score was {statistics.fmean(results)}")

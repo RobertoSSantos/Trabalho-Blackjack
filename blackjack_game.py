@@ -1,8 +1,7 @@
-import pygame
-import random
-import itertools
+import pygame, random, itertools, sys, pickle, statistics
 
-from player_ciclope import *
+from q_table_player import *
+from blackjack_players import *
 
 # Initialize Pygame
 pygame.init()
@@ -12,8 +11,7 @@ screen = pygame.display.set_mode((800, 600))
 pygame.display.set_caption('Simple Blackjack')
 
 portraits = [
-  pygame.image.load(f'portrait/1.png'),
-  pygame.image.load(f'portrait/2.png'),  
+  pygame.image.load(f'portrait/jacare.png')
 ]
 
 dealer_portrait_img = pygame.image.load(f'portrait/dealer.png'),  
@@ -33,30 +31,6 @@ for suit in suits:
         card_img =  pygame.image.load(f'cards/{value}_of_{suit}.png')
         scaled_card = pygame.transform.scale(card_img, (int(200 * image_scale), int(300 * image_scale)))        
         card_images[(suit, value)] = scaled_card
-
-
-# Card values
-card_values = {'2': 2, '3': 3, '4': 4, '5': 5, '6': 6, '7': 7, '8': 8, '9': 9, '10': 10,
-               'jack': 10, 'queen': 10, 'king': 10, 'ace': [1, 11]}
-
-# Function to calculate hand value
-def calculate_hand_value(hand):
-    value = 0
-    ace_count = 0
-    for card in hand:
-        #print(card)
-        if card.value == 'ace':
-            ace_count += 1
-        else:
-            value += card_values[card.value]
-
-    for _ in range(ace_count):
-        if value + 11 <= 21:
-            value += 11
-        else:
-            value += 1
-
-    return value
 
 # Draw card function
 def draw_card(deck, hand):
@@ -86,26 +60,16 @@ class Card:
     
   def __repr__(self):
     return f'[{self.value}-{self.suit}]'
-    
- ######################################
- #
- # Seu agente deve ser colocado nessa região
- # Lembre-se que a regra do blackjack foi modificada
- # nesse versão o dealer joga primeiro que você
- # e você joga vendo a primeira carta dele
- #
- #
-
 
 class DealerPlayer:
-  def decision(self, your_hand, dealer_hand):
+  def decision(self, player_hand, dealer_hand):
     dealer_value = calculate_hand_value(dealer_hand)
     if dealer_value < 17:
       return "hit"
     else:
       return "stop"
 
-  def result(self, your_hand, dealer_hand, decision, reward, is_not_done):
+  def result(self, player_hand, dealer_hand, decision, reward, is_not_done):
     print("Reward :", reward)
     pass
 
@@ -128,13 +92,7 @@ def play_blackjack(player, round_num):
             if event.type == pygame.QUIT:
                 running = False
 
-            # Handle player input here (e.g., hit or stand)
-            # You can use keys or mouse clicks for player decisions
-
         screen.fill((0, 0, 0))  # Clear screen (black background)
-        #render_card(deck[0], (100, 100))
-        
-        # Display the cards and scores
 
         if dealer_turn:
             # Dealer's turn logic
@@ -145,59 +103,61 @@ def play_blackjack(player, round_num):
               dealer_turn = False
               player_turn = True       
         elif player_turn:
-            # Player's turn logic
-            # Implement hit or stand decision
-            decision = player.decision(player_hand, dealer_hand[0])
+
+            decision = player.decision(player_hand, dealer_hand, round_num, total_rounds)
             if decision == "hit":
-               draw_card(deck, player_hand)
+              draw_card(deck, player_hand)
             else:
-               player_turn = False
+              player_turn = False
 
             if calculate_hand_value(player_hand) >= 21:
               player_turn = False                
                
-            score = 0   
-            #decision = player.result(player_hand, dealer_hand[0], decision)   
+            if not player_turn:         
+              player_value = calculate_hand_value(player_hand)
+              reward = player.result(player_value, dealer_value, player_turn) # Compare hands and decide winner
+              
+              hand_result = reward
+
+              print(f"Round result {hand_result}")                     
+              running = False
             
-            if not player_turn:
-                # Compare hands and decide winner
-                player_value = calculate_hand_value(player_hand)
-                if (player_value > 21):
-                  hand_result = -1
-                elif (dealer_value > 21):
-                  hand_result = +1
-                elif (player_value >= dealer_value):
-                  hand_result = +1
-                elif (player_value == dealer_value):
-                  hand_result = 0
-                else:
-                  hand_result = -1
-                print(f"Round result {hand_result}")                     
-                running = False
-            # Decision
-            decision = player.result(player_hand, dealer_hand[0], decision, hand_result, player_turn)
-        
+            if not running:
+              if decision == "hit":
+                agent.update_qtable(calculate_hand_value(player_hand[:-1]), decision, reward, player_value)
+              else:
+                agent.update_qtable(player_value, decision, reward, player_value)
+
         render_hand(player_hand, (150, 100))
         render_hand(dealer_hand, (150, 300))     
         render_portrait(player_portrait, (50, 100))
         render_portrait(dealer_portrait, (50, 300))                
         pygame.display.flip()  # Update the display
-        pygame.time.wait(1000)  
-        
-    pygame.time.wait(1000)  
 
     return hand_result
 
-
-# Insire seu jogador abaixo:
-player = Player_ciclope()
+player = Player_master()
 
 results = []
-for i in range(10):
+total_rounds = int(sys.argv[1])
+train_percentage = float(sys.argv[2])
+
+wins_num = lose_num = 0
+
+for i in range(total_rounds):
   print(f"=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= Starting game: {i} =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\n")
   results.append(play_blackjack(player, i))
-  
-import statistics
+
+end = int(total_rounds * (1 - train_percentage))
+
+for i in results[:end]:
+  if i > 0:
+    wins_num += 1
+  else:
+    lose_num += 1
+
+print(f"Wins: {wins_num}, loose: {lose_num}")
+
 print(f"Player expected score was {statistics.fmean(results)}")
 pygame.time.wait(3000)
 pygame.quit()

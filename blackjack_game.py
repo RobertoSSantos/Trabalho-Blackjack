@@ -136,7 +136,7 @@ def play_blackjack(player, round_num):
 
     return hand_result
 
-player = Player_master()
+player = Player_double()
 
 results = []
 total_rounds = int(sys.argv[1])

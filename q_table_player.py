@@ -18,11 +18,10 @@ class RLAgent:
     #     print("Using pre-trained q-table!")
     #     self.Q = pickle.load(file)
     # else:
+    #print("Using a new q-table!")
+    #pygame.time.wait(3000)
 
-    print("Using a new q-table!")
     self.Q = defaultdict(lambda: [0.0, 0.0])
-
-    pygame.time.wait(3000)     
 
     self.action_list = ["hit", "stop"]
     self.current_output = None    

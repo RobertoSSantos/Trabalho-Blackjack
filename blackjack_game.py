@@ -136,7 +136,7 @@ def play_blackjack(player, round_num):
 
     return hand_result
 
-player = Player_double()
+player = Player_simple()
 
 results = []
 total_rounds = int(sys.argv[1])
@@ -156,8 +156,16 @@ for i in results[:end]:
   else:
     lose_num += 1
 
+file_name = "results_master.txt"
+
+# Abrir o arquivo em modo de escrita
+with open(file_name, 'a') as file:
+    # Escrever os dados no arquivo
+    file.write(f"Wins: {wins_num}, lose: {lose_num}\n")
+    file.write(f"Player expected score was {statistics.fmean(results)}\n")
+
 print(f"Wins: {wins_num}, loose: {lose_num}")
 
 print(f"Player expected score was {statistics.fmean(results)}")
-pygame.time.wait(3000)
+#pygame.time.wait(3000)
 pygame.quit()

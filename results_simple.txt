@@ -1,0 +1,600 @@
+Execução 1
+Wins: 7, lose: 12
+Player expected score was -0.24
+
+----------------------------------------
+
+Execução 2
+Wins: 5, lose: 14
+Player expected score was -0.44
+
+----------------------------------------
+
+Execução 3
+Wins: 9, lose: 10
+Player expected score was -0.4
+
+----------------------------------------
+
+Execução 4
+Wins: 3, lose: 16
+Player expected score was -0.34
+
+----------------------------------------
+
+Execução 5
+Wins: 5, lose: 14
+Player expected score was -0.2
+
+----------------------------------------
+
+Execução 6
+Wins: 8, lose: 11
+Player expected score was -0.26
+
+----------------------------------------
+
+Execução 7
+Wins: 9, lose: 10
+Player expected score was -0.24
+
+----------------------------------------
+
+Execução 8
+Wins: 4, lose: 15
+Player expected score was -0.28
+
+----------------------------------------
+
+Execução 9
+Wins: 3, lose: 16
+Player expected score was -0.42
+
+----------------------------------------
+
+Execução 10
+Wins: 4, lose: 15
+Player expected score was -0.48
+
+----------------------------------------
+
+Execução 11
+Wins: 7, lose: 12
+Player expected score was -0.28
+
+----------------------------------------
+
+Execução 12
+Wins: 9, lose: 10
+Player expected score was -0.3
+
+----------------------------------------
+
+Execução 13
+Wins: 8, lose: 11
+Player expected score was -0.34
+
+----------------------------------------
+
+Execução 14
+Wins: 6, lose: 13
+Player expected score was -0.32
+
+----------------------------------------
+
+Execução 15
+Wins: 3, lose: 16
+Player expected score was -0.4
+
+----------------------------------------
+
+Execução 16
+Wins: 4, lose: 15
+Player expected score was -0.48
+
+----------------------------------------
+
+Execução 17
+Wins: 3, lose: 16
+Player expected score was -0.48
+
+----------------------------------------
+
+Execução 18
+Wins: 8, lose: 11
+Player expected score was -0.34
+
+----------------------------------------
+
+Execução 19
+Wins: 8, lose: 11
+Player expected score was -0.24
+
+----------------------------------------
+
+Execução 20
+Wins: 11, lose: 8
+Player expected score was -0.3
+
+----------------------------------------
+
+Execução 21
+Wins: 6, lose: 13
+Player expected score was -0.28
+
+----------------------------------------
+
+Execução 22
+Wins: 5, lose: 14
+Player expected score was -0.2
+
+----------------------------------------
+
+Execução 23
+Wins: 5, lose: 14
+Player expected score was -0.32
+
+----------------------------------------
+
+Execução 24
+Wins: 7, lose: 12
+Player expected score was -0.32
+
+----------------------------------------
+
+Execução 25
+Wins: 4, lose: 15
+Player expected score was -0.42
+
+----------------------------------------
+
+Execução 26
+Wins: 6, lose: 13
+Player expected score was -0.34
+
+----------------------------------------
+
+Execução 27
+Wins: 7, lose: 12
+Player expected score was -0.28
+
+----------------------------------------
+
+Execução 28
+Wins: 8, lose: 11
+Player expected score was -0.36
+
+----------------------------------------
+
+Execução 29
+Wins: 3, lose: 16
+Player expected score was -0.4
+
+----------------------------------------
+
+Execução 30
+Wins: 5, lose: 14
+Player expected score was -0.52
+
+----------------------------------------
+
+Execução 31
+Wins: 6, lose: 13
+Player expected score was -0.4
+
+----------------------------------------
+
+Execução 32
+Wins: 4, lose: 15
+Player expected score was -0.32
+
+----------------------------------------
+
+Execução 33
+Wins: 3, lose: 16
+Player expected score was -0.56
+
+----------------------------------------
+
+Execução 34
+Wins: 8, lose: 11
+Player expected score was -0.34
+
+----------------------------------------
+
+Execução 35
+Wins: 5, lose: 14
+Player expected score was -0.32
+
+----------------------------------------
+
+Execução 36
+Wins: 5, lose: 14
+Player expected score was -0.36
+
+----------------------------------------
+
+Execução 37
+Wins: 6, lose: 13
+Player expected score was -0.46
+
+----------------------------------------
+
+Execução 38
+Wins: 3, lose: 16
+Player expected score was -0.38
+
+----------------------------------------
+
+Execução 39
+Wins: 6, lose: 13
+Player expected score was -0.58
+
+----------------------------------------
+
+Execução 40
+Wins: 7, lose: 12
+Player expected score was -0.34
+
+----------------------------------------
+
+Execução 41
+Wins: 8, lose: 11
+Player expected score was -0.26
+
+----------------------------------------
+
+Execução 42
+Wins: 2, lose: 17
+Player expected score was -0.38
+
+----------------------------------------
+
+Execução 43
+Wins: 6, lose: 13
+Player expected score was -0.32
+
+----------------------------------------
+
+Execução 44
+Wins: 5, lose: 14
+Player expected score was -0.48
+
+----------------------------------------
+
+Execução 45
+Wins: 5, lose: 14
+Player expected score was -0.52
+
+----------------------------------------
+
+Execução 46
+Wins: 6, lose: 13
+Player expected score was -0.46
+
+----------------------------------------
+
+Execução 47
+Wins: 9, lose: 10
+Player expected score was -0.34
+
+----------------------------------------
+
+Execução 48
+Wins: 4, lose: 15
+Player expected score was -0.38
+
+----------------------------------------
+
+Execução 49
+Wins: 3, lose: 16
+Player expected score was -0.24
+
+----------------------------------------
+
+Execução 50
+Wins: 4, lose: 15
+Player expected score was -0.48
+
+----------------------------------------
+
+Execução 51
+Wins: 5, lose: 14
+Player expected score was -0.32
+
+----------------------------------------
+
+Execução 52
+Wins: 6, lose: 13
+Player expected score was -0.34
+
+----------------------------------------
+
+Execução 53
+Wins: 7, lose: 12
+Player expected score was -0.4
+
+----------------------------------------
+
+Execução 54
+Wins: 10, lose: 9
+Player expected score was -0.26
+
+----------------------------------------
+
+Execução 55
+Wins: 7, lose: 12
+Player expected score was -0.34
+
+----------------------------------------
+
+Execução 56
+Wins: 4, lose: 15
+Player expected score was -0.48
+
+----------------------------------------
+
+Execução 57
+Wins: 3, lose: 16
+Player expected score was -0.4
+
+----------------------------------------
+
+Execução 58
+Wins: 6, lose: 13
+Player expected score was -0.36
+
+----------------------------------------
+
+Execução 59
+Wins: 5, lose: 14
+Player expected score was -0.3
+
+----------------------------------------
+
+Execução 60
+Wins: 5, lose: 14
+Player expected score was -0.34
+
+----------------------------------------
+
+Execução 61
+Wins: 5, lose: 14
+Player expected score was -0.42
+
+----------------------------------------
+
+Execução 62
+Wins: 3, lose: 16
+Player expected score was -0.3
+
+----------------------------------------
+
+Execução 63
+Wins: 5, lose: 14
+Player expected score was -0.3
+
+----------------------------------------
+
+Execução 64
+Wins: 3, lose: 16
+Player expected score was -0.38
+
+----------------------------------------
+
+Execução 65
+Wins: 3, lose: 16
+Player expected score was -0.44
+
+----------------------------------------
+
+Execução 66
+Wins: 4, lose: 15
+Player expected score was -0.36
+
+----------------------------------------
+
+Execução 67
+Wins: 7, lose: 12
+Player expected score was -0.38
+
+----------------------------------------
+
+Execução 68
+Wins: 6, lose: 13
+Player expected score was -0.34
+
+----------------------------------------
+
+Execução 69
+Wins: 4, lose: 15
+Player expected score was -0.46
+
+----------------------------------------
+
+Execução 70
+Wins: 3, lose: 16
+Player expected score was -0.46
+
+----------------------------------------
+
+Execução 71
+Wins: 4, lose: 15
+Player expected score was -0.36
+
+----------------------------------------
+
+Execução 72
+Wins: 5, lose: 14
+Player expected score was -0.32
+
+----------------------------------------
+
+Execução 73
+Wins: 3, lose: 16
+Player expected score was -0.46
+
+----------------------------------------
+
+Execução 74
+Wins: 9, lose: 10
+Player expected score was -0.34
+
+----------------------------------------
+
+Execução 75
+Wins: 4, lose: 15
+Player expected score was -0.3
+
+----------------------------------------
+
+Execução 76
+Wins: 6, lose: 13
+Player expected score was -0.3
+
+----------------------------------------
+
+Execução 77
+Wins: 6, lose: 13
+Player expected score was -0.34
+
+----------------------------------------
+
+Execução 78
+Wins: 6, lose: 13
+Player expected score was -0.42
+
+----------------------------------------
+
+Execução 79
+Wins: 6, lose: 13
+Player expected score was -0.24
+
+----------------------------------------
+
+Execução 80
+Wins: 6, lose: 13
+Player expected score was -0.3
+
+----------------------------------------
+
+Execução 81
+Wins: 6, lose: 13
+Player expected score was -0.42
+
+----------------------------------------
+
+Execução 82
+Wins: 5, lose: 14
+Player expected score was -0.4
+
+----------------------------------------
+
+Execução 83
+Wins: 4, lose: 15
+Player expected score was -0.44
+
+----------------------------------------
+
+Execução 84
+Wins: 5, lose: 14
+Player expected score was -0.32
+
+----------------------------------------
+
+Execução 85
+Wins: 8, lose: 11
+Player expected score was -0.3
+
+----------------------------------------
+
+Execução 86
+Wins: 9, lose: 10
+Player expected score was -0.38
+
+----------------------------------------
+
+Execução 87
+Wins: 4, lose: 15
+Player expected score was -0.48
+
+----------------------------------------
+
+Execução 88
+Wins: 6, lose: 13
+Player expected score was -0.32
+
+----------------------------------------
+
+Execução 89
+Wins: 4, lose: 15
+Player expected score was -0.3
+
+----------------------------------------
+
+Execução 90
+Wins: 7, lose: 12
+Player expected score was -0.46
+
+----------------------------------------
+
+Execução 91
+Wins: 3, lose: 16
+Player expected score was -0.44
+
+----------------------------------------
+
+Execução 92
+Wins: 3, lose: 16
+Player expected score was -0.54
+
+----------------------------------------
+
+Execução 93
+Wins: 9, lose: 10
+Player expected score was -0.22
+
+----------------------------------------
+
+Execução 94
+Wins: 3, lose: 16
+Player expected score was -0.42
+
+----------------------------------------
+
+Execução 95
+Wins: 3, lose: 16
+Player expected score was -0.4
+
+----------------------------------------
+
+Execução 96
+Wins: 5, lose: 14
+Player expected score was -0.3
+
+----------------------------------------
+
+Execução 97
+Wins: 7, lose: 12
+Player expected score was -0.16
+
+----------------------------------------
+
+Execução 98
+Wins: 4, lose: 15
+Player expected score was -0.48
+
+----------------------------------------
+
+Execução 99
+Wins: 6, lose: 13
+Player expected score was -0.26
+
+----------------------------------------
+
+Execução 100
+Wins: 11, lose: 8
+Player expected score was -0.26
+
+----------------------------------------
+

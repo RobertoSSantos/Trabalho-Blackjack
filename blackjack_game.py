@@ -167,5 +167,5 @@ with open(file_name, 'a') as file:
 print(f"Wins: {wins_num}, loose: {lose_num}")
 
 print(f"Player expected score was {statistics.fmean(results)}")
-#pygame.time.wait(3000)
+pygame.time.wait(3000)
 pygame.quit()

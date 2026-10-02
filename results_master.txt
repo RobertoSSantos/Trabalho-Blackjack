@@ -598,3 +598,25 @@ Player expected score was -0.42
 
 ----------------------------------------
 
+Wins: 0, lose: 3
+Player expected score was -0 .6
+Wins: 0, lose: 3
+Player expected score was -0.2
+Wins: 5, lose: 7
+Player expected score was 0.0
+Wins: 2, lose: 10
+Player expected score was -0.6
+Wins: 22, lose: 38
+Player expected score was -0.22
+Wins: 2111, lose: 3889
+Player expected score was -0.2292
+Wins: 593, lose: 1406
+Player expected score was -0.352
+Wins: 584, lose: 1415
+Player expected score was -0.3682
+Wins: 611, lose: 1388
+Player expected score was -0.3738
+Wins: 885, lose: 2115
+Player expected score was -0.3618
+Wins: 1246, lose: 2754
+Player expected score was -0.3356
